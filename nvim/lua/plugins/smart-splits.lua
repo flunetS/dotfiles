@@ -3,8 +3,8 @@ return {
     opts = {},
     keys = {
       -- resizing splits
-      { '<A-Left>', function() require('smart-splits').resize_right() end },
-      { '<A-Right>', function() require('smart-splits').resize_left() end },
+      { '<A-l>', function() require('smart-splits').resize_right() end },
+      { '<A-h>', function() require('smart-splits').resize_left() end },
       { '<C-Up>', function() require('smart-splits').resize_up() end },
       { '<C-Down>', function() require('smart-splits').resize_down() end },
 

@@ -26,6 +26,7 @@ return {
       "query",
       "regex",
       "scss",
+      "css",
       "toml",
       "tsx",
       "typescript",
