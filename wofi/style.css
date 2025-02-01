@@ -1,10 +1,12 @@
+@import "/home/flunets/.config/waybar/colors.css";
+
 window {
-  background-color: #1a1b26;
+  background-color: @main-dark;
 }
 
 * {
   font-family: "Jetbrains Mono";
-  color: #fff;
+  color: white;
 }
 
 #scroll {
@@ -12,14 +14,14 @@ window {
 }
 
 #input {
-  background-color: #1a1b26;
-  color: #b8d5fc;
+  background-color: @main;
+  color: @text-color;
   outline: none;
   box-shadow: none;
   border: 0;
-  border-radius: 0;
+  border-radius: 0.8rem;
   font-size: 1rem;
-  padding: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 #inner-box {
@@ -28,7 +30,7 @@ window {
 }
 
 #img {
-  margin: 10px 10px;
+  margin: 0.5rem;
 }
 
 #entry {
@@ -36,10 +38,10 @@ window {
 }
 
 #entry:selected {
-  background-color: #b8d5fc;
+  background-color: @text-color;
   outline: white;
 }
 
 #text:selected {
-  color: #1a1b26;
+  color: @text-color-selected;
 }

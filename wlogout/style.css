@@ -1,0 +1,51 @@
+@import "/home/flunets/.config/waybar/colors.css";
+
+* {
+  background-image: none;
+  font-size: 16px;
+}
+
+window {
+  background-color: rgba(0, 10, 30, 0.7);
+}
+
+button {
+  color: @text-color;
+  background-color: alpha(@main, 0.5);
+  margin: 10px;
+  border: 2px solid @secondary;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10%;
+  border-radius: 16px;
+  box-shadow: none;
+  text-shadow: none;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682);
+}
+
+button:hover {
+  background-color: @text-color;
+  border-color: @text-color;
+  color: @text-color-selected;
+  background-size: 15%;
+  border-radius: 32px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682);
+}
+
+#lock {
+  background-image: image(url("./icons/lock_white.png"));
+}
+
+#shutdown {
+  background-image: image(url("./icons/shutdown_white.png"));
+}
+
+#logout {
+  background-image: image(url("./icons/logout_white.png"));
+}
+
+#reboot {
+  background-image: image(url("./icons/reboot_white.png"));
+}
