@@ -1,8 +1,8 @@
-@define-color main rgba(10, 37, 74, 0.6);
+@define-color main rgba(0, 0, 40, 0.5);
 @define-color main-dark rgba(10, 30, 60, 0.8);
 @define-color text-color #b8d5fc;
 @define-color text-color-selected #1a1b26;
-@define-color secondary #1e3e6b;
+@define-color secondary rgba(30, 62, 107, 0.7);
 @define-color rosewater #f4dbd6;
 @define-color flamingo #f0c6c6;
 @define-color pink #f5bde6;

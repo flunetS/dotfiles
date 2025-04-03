@@ -10,6 +10,16 @@ return {
         end,
       },
     },
+    ui = {
+      bar = {
+        separator = "  ",
+        extends = "…",
+      },
+      menu = {
+        separator = " ",
+        indicator = "  ",
+      },
+    },
     bar = {
       update_debounce = 100,
       sources = function(buf, _)
@@ -42,4 +52,3 @@ return {
     },
   },
 }
-

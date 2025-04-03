@@ -25,6 +25,25 @@
 --   },
 -- })
 
+-- disable diagnostics for .env files
+local lsp_hacks = vim.api.nvim_create_augroup("LspHacks", { clear = true })
+
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufReadPost" }, {
+  group = lsp_hacks,
+  pattern = ".env*",
+  callback = function(e)
+    vim.diagnostic.enable(false, { bufnr = e.buf })
+  end,
+})
+
+-- file renaming for mini.files
+vim.api.nvim_create_autocmd("User", {
+  pattern = "MiniFilesActionRename",
+  callback = function(event)
+    Snacks.rename.on_rename_file(event.data.from, event.data.to)
+  end,
+})
+
 -- Save on focus lost
 vim.api.nvim_create_autocmd({ "FocusLost", "BufLeave" }, {
   command = "silent! wa",

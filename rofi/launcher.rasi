@@ -9,12 +9,13 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,filebrowser,run";
+	modi:                       "drun,emoji";
     show-icons:                 true;
     display-drun:               " Apps";
     display-run:                " Run";
     display-filebrowser:        " Files";
     display-window:             " Windows";
+    display-emoji:              " Emoji";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
@@ -56,7 +57,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       500px;
+    width:                       420px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -90,7 +91,7 @@ mainbox {
     border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
     background-color:            transparent;
-    children:                    [ "inputbar", "message", "mode-switcher", "listview" ];
+    children:                    [ "inputbar", "message", "listview" ];
 }
 
 /*****----- Inputbar -----*****/
@@ -98,13 +99,13 @@ inputbar {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     5px 10px;
+    padding:                     0px;
     border:                      0px solid;
     border-radius:               13px;
     border-color:                @border-colour;
-    background-color:            @alternate-background;
+    background-color:            transparent;
     text-color:                  @foreground-colour;
-    children:                    [ "textbox-prompt-colon", "entry" ];
+    children:                    [ "textbox-prompt-colon", "entry", "mode-switcher" ];
 }
 
 prompt {
@@ -114,7 +115,7 @@ prompt {
 }
 textbox-prompt-colon {
     enabled:                     true;
-    padding:                     5px 0px;
+    padding:                     10px 0px 0px 10px; 
     expand:                      false;
     str:                         " ";
     background-color:            transparent;
@@ -122,7 +123,7 @@ textbox-prompt-colon {
 }
 entry {
     enabled:                     true;
-    padding:                     5px 0px;
+    padding:                     10px 0px; 
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      text;
@@ -158,18 +159,18 @@ case-indicator {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       6;
-    cycle:                       true;
+    lines:                       5;
+    cycle:                       false;
     dynamic:                     true;
-    scrollbar:                   false;
+    scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     4px;
+    spacing:                     2px;
     margin:                      0px;
-    padding:                     10px;
+    padding:                     8px;
     border:                      2px 2px 2px 2px ;
     border-radius:               13px 13px 13px 13px;
     border-color:                @border-colour;
@@ -178,9 +179,9 @@ listview {
     cursor:                      "default";
 }
 scrollbar {
-    handle-width:                5px ;
+    handle-width:                4px ;
     handle-color:                @handle-colour;
-    border-radius:               13px;
+    border-radius:               20px;
     background-color:            @alternate-background;
 }
 
@@ -189,7 +190,7 @@ element {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     6px;
+    padding:                     6px 6px 6px 10px;
     border:                      0px solid;
     border-radius:               8px;
     border-color:                @border-colour;
@@ -260,6 +261,7 @@ mode-switcher{
     text-color:                  @foreground-colour;
 }
 button {
+    width:                       100px;
     padding:                     10px;
     border:                      2px 2px 2px 2px ;
     border-radius:               13px 13px 13px 13px;

@@ -4,6 +4,7 @@
   font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
   background: none;
   font-size: 14px;
+  font-weight: 600;
 }
 
 window#waybar {
@@ -91,6 +92,10 @@ window#waybar.empty .modules-center {
 #pulseaudio {
   margin-left: 6px;
   margin-right: 6px;
+}
+
+#memory.critical {
+  color: @red;
 }
 
 #battery.charging,

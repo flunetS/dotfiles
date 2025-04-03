@@ -16,13 +16,14 @@ vim.o.mousemoveevent = true
 if vim.g.neovide then
   vim.g.neovide_transparency = vim.g.gui_transparency_default
 
-  vim.g.neovide_scale_factor = 0.75
+  vim.g.neovide_scale_factor = 0.76
 
   vim.g.neovide_cursor_vfx_mode = "none"
   vim.g.neovide_cursor_trail_size = 0.18
   vim.g.neovide_cursor_animation_length = 0.07
   vim.g.neovide_touch_drag_timeout = 0.20
   vim.g.neovide_scroll_animation_length = 0.20
+  vim.g.neovide_hide_mouse_when_typing = true
 
   vim.g.remember_window_size = true
   vim.g.remember_window_position = true

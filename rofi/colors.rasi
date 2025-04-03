@@ -1,6 +1,6 @@
 * {
-    background:      rgba(10, 37, 74, 0.6);
-    background-alt:  rgba(10, 30, 60, 0.8);
+    background:      rgba(0, 0, 40, 0.5);
+    background-alt:  rgba(30, 62, 107, 0.3);
     foreground:      #b8d5fc;
     selected:        #1e3e6b;
     active:          #a6da95;
